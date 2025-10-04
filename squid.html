@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquidFlix: Your Ticket to the Games</title>
+    <link rel="stylesheet" href="squid.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>SquidFlix</h1>
+        <nav>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">My Survival List</a>
+            <button class="login-btn">Enroll</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controls-bar">
+            <select id="genre-filter">
+                <option value="all">Filter By Genre</option>
+            </select>
+            <select id="sort-filter">
+                <option value="default">Sort By Rating</option>
+                <option value="high">Highest Rated</option>
+                <option value="low">Lowest Rated</option>
+            </select>
+        </div>
+
+        <section id="content-grid" class="content-grid">
+            <h2>Loading the Games...</h2>
+        </section>
+
+        <div class="pagination">
+            <button id="prev-btn" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-btn">Next</button>
+        </div>
+
+    </main>
+
+    <div id="info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-synopsis"></p>
+            <p>Rating: <span id="modal-rating"></span></p>
+            <p>Status: <span id="modal-status"></span></p>
+            <button id="add-watchlist-btn" class="watchlist-btn">Add to Survival List</button>
+            <button class="watch-btn">Watch Now</button>
+        </div>
+    </div>
+
+    <script src="squid.js"></script>
+</body>
+</html>
