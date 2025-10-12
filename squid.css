@@ -1,0 +1,311 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Roboto:wght@400;700&display=swap");
+
+:root {
+ 
+  --color-pink: #ff1493; 
+  --color-green: #38761d; 
+  --color-black: #1a1a1a;
+  --color-white: #f5f5f5;
+
+ 
+  --font-heading: "Saira Stencil One", Impact, sans-serif;
+  --font-body: "Roboto", Arial, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-pink);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-pink);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-green);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.navbar {
+  background-color: var(--color-black);
+  border-bottom: 3px solid var(--color-pink);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-pink);
+  text-transform: none;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--color-green);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-pink);
+  border-bottom: 2px solid var(--color-pink);
+}
+
+
+.footer {
+  background-color: var(--color-black);
+  border-top: 2px solid var(--color-green);
+  padding: 1.5rem 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.social-icons a:hover {
+  color: var(--color-pink);
+}
+
+
+.page-content {
+  padding: 40px 0;
+  min-height: calc(100vh - 120px);
+  background-color: var(--color-black);
+}
+
+.page-heading {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--color-pink);
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-green);
+  margin-bottom: 3rem;
+}
+
+.section {
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--color-green);
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section p,
+.section ul {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px var(--color-pink);
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  color: var(--color-green);
+  margin-bottom: 2rem;
+}
+
+.countdown-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--color-pink);
+  padding: 20px 40px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.countdown-label {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+#countdown-timer {
+  
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--color-pink);
+  letter-spacing: 5px;
+}
+
+.apply-button {
+  background-color: var(--color-green);
+  color: var(--color-black);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.apply-button:hover {
+  background-color: #5aa63c;
+  transform: scale(1.05);
+}
+
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.game-card {
+  background-color: #222;
+  border: 2px solid var(--color-green);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 20, 147, 0.3);
+}
+
+.game-card .icon {
+  font-size: 3rem;
+  color: var(--color-pink);
+  margin-bottom: 15px;
+}
+
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #222;
+  padding: 30px;
+  border: 3px solid var(--color-pink);
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-green);
+  border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--color-pink);
+  border-color: var(--color-pink);
+}
+
+.submit-button {
+  background-color: var(--color-green);
+  color: var(--color-black);
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; 
+  }
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+  .hero .title {
+    font-size: 2.5rem;
+  }
+  #countdown-timer {
+    font-size: 2rem;
+  }
+  .page-heading {
+    font-size: 2.5rem;
+  }
+}
